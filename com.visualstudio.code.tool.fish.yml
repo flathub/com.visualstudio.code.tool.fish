@@ -23,6 +23,11 @@ modules:
       - type: archive
         url: "https://github.com/fish-shell/fish-shell/releases/download/3.2.1/fish-3.2.1.tar.xz"
         sha256: d8e49f4090d3778df17dd825e4a2a80192015682423cd9dd02b6675d65c3af5b
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/fish-shell/fish-shell/releases/latest
+          version-query: .tag_name
+          url-query: .assets[] | select(.name=="fish-\($version).tar.xz") | .browser_download_url
 
   - name: bundle-setup
     buildsystem: simple
