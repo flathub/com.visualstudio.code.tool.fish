@@ -21,8 +21,8 @@ modules:
       ldflags: -ltinfo
     sources:
       - type: archive
-        url: "https://github.com/fish-shell/fish-shell/releases/download/3.1.2/fish-3.1.2.tar.gz"
-        sha256: d5b927203b5ca95da16f514969e2a91a537b2f75bec9b21a584c4cd1c7aa74ed
+        url: "https://github.com/fish-shell/fish-shell/releases/download/3.2.1/fish-3.2.1.tar.xz"
+        sha256: d8e49f4090d3778df17dd825e4a2a80192015682423cd9dd02b6675d65c3af5b
 
   - name: bundle-setup
     buildsystem: simple
