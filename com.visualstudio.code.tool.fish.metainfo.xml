@@ -6,4 +6,7 @@
   <name>fish</name>
   <summary>The user-friendly command line shell</summary>
   <url type="homepage">https://fishshell.com</url>
+  <releases>
+    <release version="3.2.2" date="2021-04-07"/>
+  </releases>
 </component>
