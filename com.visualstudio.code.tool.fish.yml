@@ -1,5 +1,5 @@
 id: com.visualstudio.code.tool.fish
-branch: "20.08"
+branch: '20.08'
 build-extension: true
 sdk: org.freedesktop.Sdk//20.08
 runtime: com.visualstudio.code
@@ -10,8 +10,8 @@ build-options:
   prefix: /app/tools/fish
   strip: true
 cleanup:
-  - "*.a"
-  - "*.la"
+  - '*.a'
+  - '*.la'
   - /share/man
 modules:
 
@@ -21,8 +21,8 @@ modules:
       ldflags: -ltinfo
     sources:
       - type: archive
-        url: "https://github.com/fish-shell/fish-shell/releases/download/3.2.1/fish-3.2.1.tar.xz"
-        sha256: d8e49f4090d3778df17dd825e4a2a80192015682423cd9dd02b6675d65c3af5b
+        url: https://github.com/fish-shell/fish-shell/releases/download/3.2.2/fish-3.2.2.tar.xz
+        sha256: 5944da1a8893d11b0828a4fd9136ee174549daffb3d0adfdd8917856fe6b4009
         x-checker-data:
           type: json
           url: https://api.github.com/repos/fish-shell/fish-shell/releases/latest
@@ -33,7 +33,8 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}
+      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
+        ${FLATPAK_ID}
     sources:
       - type: file
         path: com.visualstudio.code.tool.fish.metainfo.xml
