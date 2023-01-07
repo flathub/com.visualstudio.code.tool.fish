@@ -7,6 +7,7 @@
   <summary>The user-friendly command line shell</summary>
   <url type="homepage">https://fishshell.com</url>
   <releases>
+    <release version="3.6.0" date="2023-01-07"/>
     <release version="3.5.1" date="2022-07-20"/>
     <release version="3.5.0" date="2022-06-16"/>
     <release version="3.4.0" date="2022-03-12"/>
