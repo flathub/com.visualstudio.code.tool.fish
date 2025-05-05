@@ -12,10 +12,10 @@ cleanup:
   - '*.a'
   - '*.la'
   - /share/man
-add-build-extensions:
+# add-build-extensions doesn't work but this does!?
+sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 modules:
-
   - name: fish
     buildsystem: cmake-ninja
     build-options:
