@@ -7,7 +7,9 @@ runtime-version: stable
 separate-locales: false
 build-options:
   prefix: /app/tools/fish
-  strip: true
+  prepend-path: /usr/lib/sdk/rust-stable/bin
+  ## strip == true causes build failure due to read-only file system
+  strip: false
 cleanup:
   - '*.a'
   - '*.la'
@@ -19,10 +21,12 @@ modules:
   - name: fish
     buildsystem: cmake-ninja
     build-options:
-      append-path: /usr/lib/sdk/rust-stable/bin
       env:
         CARGO_HOME: /run/build/fish/cargo
-      ldflags: -ltinfod
+      ldflags: -ltinfo
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_PREFIX=/app/tools/fish
     sources:
       - type: archive
         url: https://github.com/fish-shell/fish-shell/releases/download/4.7.1/fish-4.7.1.tar.xz
