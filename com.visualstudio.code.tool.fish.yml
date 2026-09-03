@@ -25,8 +25,8 @@ modules:
       ldflags: -ltinfo
     sources:
       - type: archive
-        url: https://github.com/fish-shell/fish-shell/releases/download/4.0.8/fish-4.0.8.tar.xz
-        sha256: 7f779d13aa55d2fa3afc17364c61ab9edc16faa1eac5851badeffb4e73692240
+        url: https://github.com/fish-shell/fish-shell/releases/download/4.9.0/fish-4.9.0.tar.xz
+        sha256: 49d86d655cfcc82c7d13d66c6c30a3351600d44b40fb2b6218fbb8fb0e635122
         x-checker-data:
           type: json
           url: https://api.github.com/repos/fish-shell/fish-shell/releases/latest
